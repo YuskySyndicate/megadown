@@ -489,7 +489,7 @@ if [ $(echo -n "$link" | grep -E -o 'mega(\.co)?\.nz') ]; then
 	dl_temp_url=$(echo "$mega_res_json" | jq -r .[0].g)
 	
 	if [ $metadata ]; then
-		echo "{\"file_name\" : \"${file_name}\", \"file_size\" : ${file_size}, \"url\" : \"${dl_temp_url}\"}"
+		echo "{\"file_name\" : \"${file_name}\", \"file_size\" : ${file_size}, \"url\" : \"${dl_temp_url}\", \"hex_raw_key\" : \"${hex_raw_key:32:16}0000000000000000\", \"hex_key\" : \"${hex_key}\"}"
 		exit 0
 	fi
 
@@ -585,7 +585,7 @@ else
 	fi
 
 	if [ $metadata ]; then
-		echo "{\"file_name\" : \"${file_name}\", \"file_size\" : ${file_size}}"
+		echo "{\"file_name\" : \"${file_name}\", \"file_size\" : ${file_size}, \"url\" : \"${dl_temp_url}\", \"hex_raw_key\" : \"${hex_raw_key:32:16}0000000000000000\", \"hex_key\" : \"${hex_key}\"}"
 		exit 0
 	fi
 
