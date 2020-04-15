@@ -23,7 +23,7 @@ function showError {
 }
 
 function showHelp {
-	echo -e "\nmegadown $VERSION - https://github.com/tonikelope/megadown"
+	echo -e "\nmegadown $VERSION - https://github.com/yusrilsyahruddin/megadown"
 	echo -e "\ncli downloader for mega.nz and megacrypter"
 	echo -e "\nSingle url mode:           megadown [OPTION]... 'URL'\n"
 	echo -e "\tOptions:"
